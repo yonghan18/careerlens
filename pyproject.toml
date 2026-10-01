@@ -1,0 +1,9 @@
+[project]
+name = "careerlens"
+version = "0.1.0"
+description = "A source-cited job-search research agent with hybrid retrieval and measurable evaluation."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
