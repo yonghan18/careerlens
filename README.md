@@ -103,3 +103,16 @@ The initial publication is organized into phase commits so reviewers can inspect
 6. Publication: setup guide, architecture, limitations, and reproducible checks.
 
 Next experiments: expand and independently review evaluation labels, assess claim support beyond citation IDs, measure chunking/retrieval tradeoffs, and test provider error paths. Add reranking only if comparative measurements justify it.
+
+## Development workflow
+
+Repository-wide [AI coding rules](AGENTS.md) document evidence boundaries,
+focused changes, offline checks and honest
+reporting. For behavior changes, write acceptance criteria in a small `specs/`
+document before implementation, then connect the criteria to tests and review the
+resulting diff.
+
+[Retrieval index consistency](specs/index-consistency.md) documents a failure
+boundary with offline regression coverage for stale search results and paginated
+index pruning. These checks do not change the published evaluation baseline or
+the project's local-prototype status.
